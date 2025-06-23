@@ -25,7 +25,7 @@ Here, we provide `R` codes to reproduce our simulation study and replicate our d
  
    This `R` file replicates Tables 2 and Table 3 of our study.
 
-  * `CaseStudy_alg9_Functions.R` 
+* `CaseStudy_alg9_Functions.R` 
  
    This `R` file contains source files used in `CaseStudy_al9_main.R`.
 
@@ -35,7 +35,7 @@ Here, we provide `R` codes to reproduce our simulation study and replicate our d
 
    This `R` file contains the simulation codes for our propposed simulation-based sensitivity analysis for heterogenous effects. This code replicates Figures 2 and 3 of our paper.
 
-  * `Simulation_hom.R`  
+* `Simulation_hom.R`  
 
    This `R` file contains the simulation codes for our propposed simulation-based sensitivity analysis for homogeneous effects. This code replicates Figures 2 and 3 of our paper.
 
