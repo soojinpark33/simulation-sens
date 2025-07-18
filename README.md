@@ -4,7 +4,7 @@ R codes for "Simulation-Based Sensitivity Analysis in Optimal Treatment Regimes 
 Soojin Park<sup>1</sup>, Suyeon Kang<sup>2</sup>, and Chioun Lee<sup>3</sup>
 
 <sup>1</sup> School of Education, University of California, Riverside  
-<sup>2</sup> Department of Statistics, University of Central Florida
+<sup>2</sup> Department of Statistics and Data Science, University of Central Florida
 <sup>3</sup> Department of Sociology, University of California, Riverside
 
 
