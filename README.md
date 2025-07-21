@@ -33,11 +33,11 @@ Here, we provide `R` codes to reproduce our simulation study and replicate our d
 
 * `Simulation_het.R`  
 
-   This `R` file contains the simulation codes for our propposed simulation-based sensitivity analysis for heterogenous effects. This code replicates Figures 2 and 3 of our paper.
+   This `R` file contains the simulation codes for our proposed simulation-based sensitivity analysis for heterogenous effects. This code replicates Figures 2 and 3 of our paper.
 
 * `Simulation_hom.R`  
 
-   This `R` file contains the simulation codes for our propposed simulation-based sensitivity analysis for homogeneous effects. This code replicates Figures 2 and 3 of our paper.
+   This `R` file contains the simulation codes for our proposed simulation-based sensitivity analysis for homogeneous effects. This code replicates Figures 2 and 3 of our paper.
 
 * `functions_het.R` 
  
