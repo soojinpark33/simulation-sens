@@ -36,19 +36,18 @@ xvars <- exprs(S1M8GRADE,ses,X1PAR1OCC_STEM1,X1PAR2OCC_STEM1,P1EDUEXPECT,P1EDUAS
                X1SCHOOLCLI,X2PROBLEM,M1UNPREPPCT,requirements,schextracur,friend,
                  X1MTHINT,X1MTHUTI,X1MTHEFF,X1SCHOOLENG,X1SCHOOLBEL)
 h1vars <- exprs(S1M8GRADE,X1MTHEFF,X1MTHINT)
-mvar <- "algebra1" # it should be factor, @Karen, if it is not factor, give a warning that the mediator has to be a binary factor
-yvar <- "X2TXMTH" # it should be continuous, @Karen, if it is not continuous, give a warning
+mvar <- "algebra1" # it should be factor
+yvar <- "X2TXMTH" # it should be continuous
 
 ## Setting (Change to numbers after #, we used the samllest number to reduce the run time)
-num_cores = 1 #16
-nsim = 4 #20
-B = 2 #500
-Iternum = 1 #15
+num_cores = 16
+nsim = 20
+B = 500
+Iternum = 15
 k.m = k.y = 1 
 # k.m = 1; k.y = -1 
 
 ## Unadjusted Results
-data <- data[sample(nrow(data), 500), ] # I randomly sampled from the data to reduce time
 results_unadj <- ind.decomp(B = B, data = data, cvars = cvars, rvar = rvar, xvars = xvars,
                           mvar = mvar, yvar = yvar, h1vars = h1vars, cluster = "SCH_ID")
 
