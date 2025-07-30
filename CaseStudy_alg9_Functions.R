@@ -129,7 +129,7 @@ reg1_no_int <- function(b.m = NULL, b.y = NULL, B, data,cvars, rvar, xvars, mvar
                            txName = mvar, verbose = FALSE)
     
     
-    data$opt.M <- ifelse(data[[rvar]] == "white", (optTx(fitFS0)$optimalTx),(optTx(fitFS1)$optimalTx)) #@Karen, change "white" to the reference group
+    data$opt.M <- ifelse(data[[rvar]] == "white", (optTx(fitFS0)$optimalTx),(optTx(fitFS1)$optimalTx)) 
 
     ta <- table(data$opt.M)
     p.opt <- ta[2] / (ta[2] + ta[1]) * 100
@@ -188,7 +188,7 @@ reg1_no_int <- function(b.m = NULL, b.y = NULL, B, data,cvars, rvar, xvars, mvar
   regzeta_IIE.boot <- regdelta_IIE.boot <- zeta_ICDE.boot <- rep(NA, B)
   
   for(i in 1:B){
-    clusters <- unique(data[,cluster]) # @Karen, if they did not specify anything for cluster, it should operate standard bootsrapping
+    clusters <- unique(data[,cluster]) 
     m <- length(clusters)
     units <- sample(clusters, size = length(clusters), replace = TRUE)
     df.bs <- sapply(units, function(x) which(data[,cluster] == x))
@@ -220,8 +220,8 @@ ind.decomp <- function(B, data,cvars, rvar, xvars, mvar, yvar, h1vars, cluster){
   
   est1 <- function(data){  
     
-    data_R0 <- subset(data, data[[rvar]] == "white") # change this to reference group, @KAren
-    data_R1 <- subset(data, data[[rvar]] == "black") # change this to the remaining groups, @KAren
+    data_R0 <- subset(data, data[[rvar]] == "white") 
+    data_R1 <- subset(data, data[[rvar]] == "black") 
     
     # weighting
     moPropen1 <- buildModelObj(model = as.formula(paste0(" ~ ", paste(c(cvars,xvars), collapse = " + "))),
@@ -246,7 +246,7 @@ ind.decomp <- function(B, data,cvars, rvar, xvars, mvar, yvar, h1vars, cluster){
                           txName = mvar, verbose = FALSE)
     
 
-    data$opt.M <- ifelse(data[[rvar]] == "white", optTx(fitFS0)$optimalTx,optTx(fitFS1)$optimalTx) #@Karen, change "white" to the reference group
+    data$opt.M <- ifelse(data[[rvar]] == "white", optTx(fitFS0)$optimalTx,optTx(fitFS1)$optimalTx) 
     ta <- table(data$opt.M)
     p.opt <- ta[2]/(ta[2] + ta[1]) * 100
     # rpart.plot(classif(object=fitFS0))
@@ -303,7 +303,7 @@ ind.decomp <- function(B, data,cvars, rvar, xvars, mvar, yvar, h1vars, cluster){
   regzeta_IIE.boot <- regdelta_IIE.boot <- zeta_ICDE.boot <- rep(NA, B)
   
   for(i in 1:B){
-    clusters <- unique(data[, cluster]) # @ Karen, please make an option to do clustered boostrap or standard boostrap (null for cluster)
+    clusters <- unique(data[, cluster]) 
     units <- sample(clusters, size = length(clusters), replace = TRUE)
     df.bs <- sapply(units, function(x) which(data[, cluster] == x))
     sb <- unlist(df.bs)
@@ -428,6 +428,5 @@ ind.decompsense <- function(k.y, k.m, Iternum, data, cvars, rvar, xvars, mvar, y
   )
   
   # 5. Return the final list of results
-  # @ Karen, Create a table similar to Table 4
   return(results_hom1)
 }
