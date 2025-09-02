@@ -21,13 +21,10 @@ Here, we provide `R` codes to reproduce our simulation study and replicate our d
   
   For our case study, we used data from the Midlife Development in the U.S. (MIDUS) study. However, as the MIDUS data is restricted from circulation, and the original data can be downloaded from the MIDUS portal by clicking [here](https://www.midus.wisc.edu/data/index.php). 
 
-* `CaseStudy_alg9_main.R` 
+* `CaseStudy_alg9.R` 
  
    This `R` file replicates Tables 2 and Table 3 of our study.
 
-* `CaseStudy_alg9_Functions.R` 
- 
-   This `R` file contains source files used in `CaseStudy_al9_main.R`.
 
 ## Simulation Study
 
